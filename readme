@@ -1,0 +1,27 @@
+                                        Flash_Share Torrentz
+                                            By:
+                                                Ankit Pant
+                                                2018201035
+
+
+
+Flash_Share Torrentz is  a basic torrent file system which gives the user the ability to create a special .mtorrent file that can then be used to share files on a peer to peer basis.
+
+Components:
+    1. Client:
+            The client gives the user the functionality of creating a .mtorrent file for the file the user wants to share. It also provides the functionality of adding its entry to the trackers, removing its entry from the trackers, and getting other peer information to download files. It would in successive versions also provide the functionality of viewing all downloaded files.
+
+    2. Trackers:
+            The trackers are responsible of storing the metadeta of which peers want to share and which files they want to share. They also provide a functionality to return peer information to any peer wanting to download a file. The current limit to the number of concurrent peers supported are 100. The trackers in successive versions would provide the feature of automatic synchronization after a specific time period.
+
+Limitations:
+    The current program has the following limitations:
+    1.  The peers can send and receive all necessary information but do not as of yet         support file sharing.
+    2.  The trackers though robust don't implement syncronization with each other.
+    3.  The "view downloads" commands does not work as of yet.
+    4.  As of now closing a mtorrent-client would not trigger a signal to the tracker to remove        its entry from the "seeders_list" file.
+
+Miscellaneous:
+    1.  The mtorrent-client on given a particular file path converts it to the absolute       file path and thence stores/sends the path information.
+    2.  The makefile results in creating the client executable, the tracker-1 executable 
+        and the tracker-2 executable.
